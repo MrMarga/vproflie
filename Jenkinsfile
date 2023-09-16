@@ -15,11 +15,7 @@ pipeline {
         NEXUSPORT = '8081'
         NEXUS_GRP_REPO = 'vprofile-maven-group'
         NEXUS_LOGIN = 'nexuslogin'
-        SONARSERVER ='sonarserver'
-        SONARSCANNER ='sonarscanner'
-       
     }
-
     stages {
         stage('Build'){
             steps {
@@ -44,8 +40,9 @@ pipeline {
             steps {
                 sh 'mvn -s settings.xml checkstyle:checkstyle'
             }
-            
-            }
+
+
+
         }
     }
 }
